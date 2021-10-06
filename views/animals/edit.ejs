@@ -8,29 +8,37 @@
       <div>
         <form action="/animals/<%= animal._id %>?_method=PUT" method="post">
           <fieldset>
-            <legend>Edit a <%= animal.name %></legend>
+            <legend>Edit a <%= animal.species %></legend>
             <label>
-              NAME:<input
+              Species:<input
                 type="text"
-                name="name"
-                value="<%= animal.name %>"
-                placeholder="enter animal name"
+                name="species"
+                value="<%= animal.species %>"
+                placeholder="enter animal species"
               />
             </label>
             <label>
-              COLOR:<input
+              Location:<input
                 type="text"
-                name="color"
-                value="<%= animal.color %>"
-                placeholder="enter animal name"
+                name="location"
+                value="<%= animal.location %>"
+                placeholder="enter animal location"
               />
             </label>
             <label>
-              READY TO EAT:<input type="checkbox" name="extinct" <%=
+              Life Expectancy:<input
+                type="number"
+                name="lifeExpectancy"
+                value="<%= animal.lifeExpectancy %>"
+                placeholder="enter animal lifeExpectancy"
+              />
+            </label>
+            <label>
+              Extinct:<input type="checkbox" name="extinct" <%=
               animal.extinct ? "checked" : "" %> />
             </label>
           </fieldset>
-          <input type="submit" value="Update <%= animal.name %>" />
+          <input type="submit" value="Update <%= animal.species %>" />
         </form>
       </div>
     </main>

@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <%- include("../partials/head.ejs") %>
 
-  <body>
-    <%- include("../partials/header.ejs") %>
-    <main>
-      <div>
-
-        <article>
-          <h2><%= animal.name %> - <%= animal.extinct ? "Extinct" : "Not Extinct" %></h2>
-          <h3><%= animal.color %></h3>
-          <a href="/animals/<%= animal._id %>/edit"><button>Edit</button></a>
-          <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete"/>
-          </form>
-          <a href="/animals/"><button>Back to Main</button></a>
-        </article>
-
-      </div>
-    </main>
-  </body>
-</html>
+<article x-data="{showTools: false}">
+  <h2>Species: <%= animal.species %> - <%= animal.extinct ? "Extinct" : "Not Extinct" %></h2>
+  <h3>Location: <%= animal.location %></h3>
+  <h3>Life Expectancy: <%= animal.lifeExpectancy %></h3>
+  <button x-on:click="showTools = !showTools">Show Options</button>
+  <div x-show="showTools" x-transition>
+  <a href="/animals/<%= animal._id %>/edit"><button>Edit</button></a>
+  <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete"/>
+  </form>
+  <a href="/animals/"><button>Back to Main</button></a>
+  </div>
+</article>
