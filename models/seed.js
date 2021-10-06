@@ -17,11 +17,11 @@ mongoose.connection.on("open", () => {
 
   // Run any database queries in this function
   const startAnimals = [
-    { name: "Orange", color: "orange", readyToEat: false },
-    { name: "Grape", color: "purple", readyToEat: false },
-    { name: "Banana", color: "orange", readyToEat: false },
-    { name: "Strawberry", color: "red", readyToEat: false },
-    { name: "Coconut", color: "brown", readyToEat: false },
+    { name: "Orange", color: "orange", extinct: false },
+    { name: "Grape", color: "purple", extinct: false },
+    { name: "Banana", color: "orange", extinct: false },
+    { name: "Strawberry", color: "red", extinct: false },
+    { name: "Coconut", color: "brown", extinct: false },
   ];
 
   // Delete all animals

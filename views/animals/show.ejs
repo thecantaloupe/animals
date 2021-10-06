@@ -8,7 +8,7 @@
       <div>
 
         <article>
-          <h2><%= animal.name %> - <%= animal.readyToEat ? "Ripe" : "Not Ripe" %></h2>
+          <h2><%= animal.name %> - <%= animal.extinct ? "Extinct" : "Not Extinct" %></h2>
           <h3><%= animal.color %></h3>
           <a href="/animals/<%= animal._id %>/edit"><button>Edit</button></a>
           <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">

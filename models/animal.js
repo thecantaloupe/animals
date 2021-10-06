@@ -11,9 +11,10 @@ const { Schema, model } = mongoose;
 
 // make animals schema
 const animalsSchema = new Schema({
-  name: String,
-  color: String,
-  readyToEat: Boolean,
+  species: String,
+  extinct: Boolean,
+  location: String,
+  lifeExpectancy: Number,
   username: String,
 });
 
